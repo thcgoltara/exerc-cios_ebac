@@ -10,7 +10,6 @@
 
             Esquema do Cenário: Preenchimento - Dados obrigatórios
             Quando o usuário preencher os campos obrigatórios:
-            <Nome> <Sobrenome> <Pais> <Endereco> <Cidade> <CEP> <Telefone> <Endereco de e-mail>
             Então o sistema deve permitir a finalização da compra
 
             Exemplos:
@@ -19,12 +18,10 @@
             | "Th"      | "Goltara" | "Brasil" | "Rua"              | "Serra" | "00000"    | "27 996079001" | "thyessagoltara@outlook.com" | "Permite finalizar Compra" | "Campos inválidos!" |
 
             Cenário: E-mail inválido
-            Quando o usuário preencher os campos obrigatórios:
-            <Nome> <Sobrenome> <Pais> <Endereco> <Cidade> <CEP> <Telefone> <Endereco de e-mail>
+            Quando o usuário preencher os campos obrigatórios
             E indicar um e-mail com formato inválido "thyessa@gma.com"
             Então o sistema deve exibir a mensagem de erro: "e-mail inválido"
             
             Cenário: Campos vazios
-            Quando o usuário não preencher ao menos um dos campos obrigatórios:
-            <Nome> <Sobrenome> <Pais> <Endereco> <Cidade> <CEP> <Telefone> <Endereco de e-mail>
+            Quando o usuário não preencher ao menos um dos campos obrigatórios
             Então o sistema deve exibir a mensagem de erro: "Preencha todos os campos!"
